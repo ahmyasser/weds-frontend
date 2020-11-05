@@ -1,0 +1,237 @@
+{
+    "categories":[
+        {
+            "id": 1,
+            "url": "https://via.placeholder.com/600/b4412f",
+            "title": "first category",
+            "photosIds": [11,12,13,14]
+          },
+          {
+            "id": 2,
+            "url": "https://via.placeholder.com/600/121fa4",
+            "title": "second category",
+            "photosids": [21,22,23,24,25,26,27,28,29]
+          },
+          {
+            "id": 3,
+            "url": "https://via.placeholder.com/600/627495",
+            "title": "3rd category",
+            "photosids": [31,32,33,34,35,36,37]},
+          {
+            "id": 4,
+            "url": "https://via.placeholder.com/600/9da52c",
+            "title": "4th category",
+            "photosids": [41,42,43,44,45,46,47,48,49]},
+          {
+            "id": 5,
+            "url": "https://via.placeholder.com/600/c52dc0",
+            "title": "5th category",
+            "photosids": [51,52,53,54,55,56]
+          }
+    ] ,
+    "photos": [{
+            "categoryId": 1,
+            "id": 11,
+            "title": "et soluta est",
+            "url": "https://via.placeholder.com/600/b4412f"
+          },
+          {
+            "categoryId": 1,
+            "id": 12,
+            "title": "ut esse id",
+            "url": "https://via.placeholder.com/600/68e0a8"
+          },
+          {
+            "categoryId": 1,
+            "id": 13,
+            "title": "quasi quae est modi quis quam in impedit",
+            "url": "https://via.placeholder.com/600/2cd88b"
+          },
+          {
+            "categoryId": 1,
+            "id": 14,
+            "title": "et inventore quae ut tempore eius voluptatum",
+            "url": "https://via.placeholder.com/600/9e59da"
+          },
+          {
+            "categoryId": 2,
+            "id": 21,
+            "title": "non sunt voluptatem placeat consequuntur rem incidunt",
+            "url": "https://via.placeholder.com/600/8e973b"
+          },
+          {
+            "categoryId": 2,
+            "id": 22,
+            "title": "eveniet pariatur quia nobis reiciendis laboriosam ea",
+            "url": "https://via.placeholder.com/600/121fa4"
+          },
+          {
+            "categoryId": 2,
+            "id": 23,
+            "title": "soluta et harum aliquid officiis ab omnis consequatur",
+            "url": "https://via.placeholder.com/600/6efc5f"
+          },
+          {
+            "categoryId": 2,
+            "id": 24,
+            "title": "ut ex quibusdam dolore mollitia",
+            "url": "https://via.placeholder.com/600/aa8f2e"
+          },
+          {
+            "categoryId": 2,
+            "id": 25,
+            "title": "voluptatem consequatur totam qui aut iure est vel",
+            "url": "https://via.placeholder.com/600/5e04a4"
+          },
+          {
+            "categoryId": 2,
+            "id": 26,
+            "title": "vel voluptatem esse consequuntur est officia quo aut quisquam",
+            "url": "https://via.placeholder.com/600/f9f067"
+          },
+          {
+            "categoryId": 2,
+            "id": 27,
+            "title": "vero est optio expedita quis ut molestiae",
+            "url": "https://via.placeholder.com/600/95acce"
+          },
+          {
+            "categoryId": 2,
+            "id": 28,
+            "title": "rem pariatur facere eaque",
+            "url": "https://via.placeholder.com/600/cde4c1"
+          },
+          {
+            "categoryId": 2,
+            "id": 29,
+            "title": "modi totam dolor eaque et ipsum est cupiditate",
+            "url": "https://via.placeholder.com/600/a46a91"
+          },   
+          {
+            "categoryId": 3,
+            "id": 31,
+            "title": "qui tempora vel exercitationem harum iusto voluptas incidunt",
+            "url": "https://via.placeholder.com/600/627495"
+          },
+          {
+            "categoryId": 3,
+            "id": 32,
+            "title": "quos rem nulla ea amet",
+            "url": "https://via.placeholder.com/600/cc178e"
+          },
+          {
+            "categoryId": 3,
+            "id": 33,
+            "title": "laudantium quibusdam inventore",
+            "url": "https://via.placeholder.com/600/170690"
+          },
+          {
+            "categoryId": 3,
+            "id": 34,
+            "title": "hic nulla consectetur",
+            "url": "https://via.placeholder.com/600/1dff02"
+          },
+          {
+            "categoryId": 3,
+            "id": 35,
+            "title": "consequatur quaerat sunt et",
+            "url": "https://via.placeholder.com/600/e79b4e"
+          },
+          {
+            "categoryId": 3,
+            "id": 36,
+            "title": "unde minus molestias",
+            "url": "https://via.placeholder.com/600/da7ddf"
+          }, {
+            "categoryId": 4,
+            "id": 41,
+            "title": "eum laborum in sunt ea",
+            "url": "https://via.placeholder.com/600/9da52c"
+          },
+          {
+            "categoryId": 4,
+            "id": 42,
+            "title": "dolorum ipsam odit",
+            "url": "https://via.placeholder.com/600/7f330f"
+          },
+          {
+            "categoryId": 4,
+            "id": 43,
+            "title": "occaecati sed earum ab ut vel quibusdam perferendis nihil",
+            "url": "https://via.placeholder.com/600/877cd8"
+          },
+          {
+            "categoryId": 4,
+            "id": 44,
+            "title": "sed quia accusantium nemo placeat dolor ut",
+            "url": "https://via.placeholder.com/600/11af10"
+          },
+          {
+            "categoryId": 4,
+            "id": 45,
+            "title": "nisi odio nihil molestias facere laudantium distinctio facilis et",
+            "url": "https://via.placeholder.com/600/211c94"
+          },
+          {
+            "categoryId": 4,
+            "id": 46,
+            "title": "qui autem adipisci veritatis iure necessitatibus et ab voluptatem",
+            "url": "https://via.placeholder.com/600/5fa928"
+          },
+          {
+            "categoryId": 4,
+            "id": 47,
+            "title": "est ad molestiae ut voluptatum omnis sit consequuntur et",
+            "url": "https://via.placeholder.com/600/3587a"
+          },
+          {
+            "categoryId": 4,
+            "id": 48,
+            "title": "sequi maiores aut sunt",
+            "url": "https://via.placeholder.com/600/170b0e"
+          },
+          {
+            "categoryId": 4,
+            "id": 49,
+            "title": "aliquid aut at sed repudiandae est autem",
+            "url": "https://via.placeholder.com/600/739fba"
+          },
+          {
+            "categoryId": 5,
+            "id": 51,
+            "title": "qui laboriosam et quae consequatur",
+            "url": "https://via.placeholder.com/600/c52dc0"
+          },
+          {
+            "categoryId": 5,
+            "id": 52,
+            "title": "officiis consequatur necessitatibus id beatae voluptatem in sit dolorem",
+            "url": "https://via.placeholder.com/600/72ce88"
+          },
+          {
+            "categoryId": 5,
+            "id": 53,
+            "title": "cumque nihil ullam laborum ut et",
+            "url": "https://via.placeholder.com/600/423b8d"
+          },
+          {
+            "categoryId": 5,
+            "id": 54,
+            "title": "vel quam tempore dolor eveniet",
+            "url": "https://via.placeholder.com/600/b4e761"
+          },
+          {
+            "categoryId": 5,
+            "id": 55,
+            "title": "aperiam mollitia nisi sed ad magnam repellendus et",
+            "url": "https://via.placeholder.com/600/80e9fe"
+          },
+          {
+            "categoryId": 5,
+            "id": 56,
+            "title": "incidunt aliquid possimus",
+            "url": "https://via.placeholder.com/600/c6a0c"
+          }
+   
+        ]
+  }
