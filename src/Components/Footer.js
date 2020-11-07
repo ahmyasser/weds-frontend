@@ -4,6 +4,7 @@ import {FaInstagram, FaFacebookF} from "react-icons/fa"
 
 const Footer  = () => {
     const FooterBackground= styled.div`
+    height:90px;
     background-color: #000000;
     padding: 20px;
     display: flex;  
@@ -16,10 +17,14 @@ const Footer  = () => {
     }
     & a {
         color:white;
+        @media (max-width:1024px) {
+            font-size: 12px;
+        }
     }
     & h1 {
         font-size:18px;
     }
+    
     `;
 
     const FooterLift= styled.div`
@@ -29,7 +34,7 @@ const Footer  = () => {
 
     const FooterCenter= styled.div`
         color:#696969;
-        padding-top: 50px;
+        padding-top: 40px;
         font-size: 9px;
         font-weight: normal; 
         & Strong {
@@ -43,6 +48,8 @@ const Footer  = () => {
     flex-direction: column;
     justify-content: flex-end;
     padding-right: 70px;
+    padding-bottom: 15px;
+    
     & a{
         display: flex;
         font-size: 9px;
@@ -55,7 +62,9 @@ const Footer  = () => {
     const socialmedia= styled.div`
         display: flex;
         justify-content: space-between;
-        flex:1;
+        @media (max-width:1024px) {
+            text-align: center;
+        }
         `;
 
         
