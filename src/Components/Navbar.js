@@ -14,11 +14,20 @@ const Navbar  = () => {
         max-height: 78px;
         margin: -25px 20px;
       }
+      @media (max-width:1024px) {
+        display: none;
+      }
+      @media (max-width: 1024px) {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem;
+        position: relative;
+    }
     `;
 
     const UserControl= styled.div`
-    order: 3;
-    flex-grow: 2;
     display: flex;
     justify-content: flex-start;
     padding-inline-start: 8px;
@@ -38,8 +47,6 @@ const Navbar  = () => {
         `;
     
     const HeaderPart= styled.div`
-    padding: 0;
-    margin: 0;
     width: 100%;
     height: 100%;
     display: flex;

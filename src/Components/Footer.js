@@ -28,8 +28,11 @@ const Footer  = () => {
     `;
 
     const FooterLift= styled.div`
-        
-        
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
         `;
 
     const FooterCenter= styled.div`
@@ -59,28 +62,22 @@ const Footer  = () => {
     }
     `;
 
-    const socialmedia= styled.div`
-        display: flex;
-        justify-content: space-between;
-        @media (max-width:1024px) {
-            text-align: center;
-        }
-        `;
-
+    
         
     
     return (<div>
         <FooterBackground>
-        <FooterLift>   
-        <Link to="/"><h1>Weds360</h1></Link>
-            <socialmedia>
+        <FooterLift>
+           
+            <Link to="/"><h1>Weds360</h1></Link>
+            <div>
             <Link to="/">
             <FaFacebookF size={15} color="white"/>
             </Link>
             <Link to="/">
               <FaInstagram size={15} className="ig"/>
             </Link>
-            </socialmedia>
+            </div>
             </FooterLift>
             <FooterCenter>
             © Copyright
