@@ -6,9 +6,7 @@ import {FaAngleRight} from "react-icons/fa"
 import PhotoList from '../Components/PhotoList';
 import SearchPhotos from '../Components/SearchPhotos';
 
-const HomeScreen  = ({photos}) => {
-
-    useEffect( () => { console.log('here'+photos);},[]);
+const HomeScreen  = ({photos, searchChange, searchField}) => {
 
     const SectionContainer= styled.div`
     max-width: 1100px;
@@ -35,12 +33,14 @@ const HomeScreen  = ({photos}) => {
     `;
     const MidSection= styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: flex-end; 
     align-items: stretch;
+    
     `;
     const ListSection= styled.div`
     flex-grow: 3;
-    
+    margin-left:100px;
+    margin-top:30px
     
     `;
 
@@ -56,12 +56,12 @@ Gallery
 <FaAngleRight size={25}/>
 <h1>
       Wedding Ideas
-    </h1>
+</h1>
 </Header>
 <MidSection>
-<SearchPhotos/>
+<SearchPhotos searchField={searchField} searchChange={searchChange}/>
 <ListSection>
-<PhotoList/>
+<PhotoList photos={photos}/>
 </ListSection>
 </MidSection>
 </SectionContainer>
