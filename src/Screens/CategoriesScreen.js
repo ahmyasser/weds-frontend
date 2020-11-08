@@ -1,11 +1,7 @@
-import {Link} from 'react-router-dom';
 import styled from 'styled-components';
-import {FaAngleRight} from "react-icons/fa"
 
-import PhotoList from '../Components/PhotoList';
-import SearchPhotos from '../Components/SearchPhotos';
 
-const HomeScreen  = ({photos, searchChange, searchField}) => {
+const CategoriesScreen  = ({categories, searchChange, searchField}) => {
 
     const SectionContainer= styled.div`
     max-width: 1100px;
@@ -46,24 +42,12 @@ const HomeScreen  = ({photos, searchChange, searchField}) => {
 <div>
 <SectionContainer>
 <Header>
-<Link to="/">
-<h1>
-Gallery
-</h1>
-</Link>
-<FaAngleRight size={25}/>
-<h1>
-      Wedding Ideas
-</h1>
+<h1>Categories</h1>
 </Header>
 <MidSection>
-<SearchPhotos searchField={searchField} searchChange={searchChange}/>
-<ListSection>
-<PhotoList photos={photos}/>
-</ListSection>
 </MidSection>
 </SectionContainer>
 </div>     
     );
 }
-export default HomeScreen;
+export default CategoriesScreen;

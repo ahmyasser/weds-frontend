@@ -8,3 +8,44 @@ a{
 ul {
   list-style-type: none;
 }
+
+.pagination{
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  align-self: center;
+}
+
+.pagination li{
+  border-right: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+
+  padding: 6px 12px;
+  background-color: white;
+}
+.pagination a{
+  color: #008174;        
+  cursor: pointer;
+  outline: 0;
+}
+.pagination .pagination__link--disabled a{
+      cursor: not-allowed;
+  }
+
+.pagination .first-of-type{
+    border-radius: 5px;
+    border-left: 1px solid #ddd;
+}
+.pagination .last-of-type{
+    border-radius: 5px;;
+}
+.pagination .pagination__link--active{
+    background-color: #024d4c;
+
+}
+.pagination .pagination__link--active      a{
+  color: #ffffff;
+}
+

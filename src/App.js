@@ -7,6 +7,8 @@ import Navbar from './Components/Navbar';
 import Footer from './Components/Footer';
 import BottomSection from './Components/BottomSection';
 import HomeScreen from './Screens/HomeScreen';
+import CategoriesScreen from './Screens/CategoriesScreen';
+
 import {requestPhotos, requestCategories, setSearchField} from './actions';
 import './App.css';
 
@@ -27,11 +29,25 @@ const filteredPhotos = photos.filter((photo)=>{
   return photo.title.toLowerCase().includes(searchField.toLowerCase())
 })
 
+const filteredCategories = categories.filter((photo)=>{
+  return photo.title.toLowerCase().includes(searchField.toLowerCase())
+})
+
+
 return (
     <BrowserRouter>
     <Navbar/>
     <Switch>
-    <Route  path="/"> <HomeScreen searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} /></Route>
+
+    <Route exact path="/categories"> 
+    <CategoriesScreen searchField={searchField} searchChange={onSearchChange} categories={filteredCategories} /></Route>
+
+    <Route path="/">
+     <HomeScreen searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} />
+    </Route>
+    
+
+
     </Switch>
     <BottomSection/>
     <Footer/>
