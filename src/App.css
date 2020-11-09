@@ -49,3 +49,22 @@ ul {
   color: #ffffff;
 }
 
+.searchBox {
+  width: 20em;
+    height: 2.5em;
+        border: 1px solid black;
+        border-radius: 2px;
+        padding: 5px;
+
+}
+
+.SearchContainer {
+  display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+     flex-wrap: wrap;
+     margin-right: 15px;
+     
+}
+
+

@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import styled, {ThemeProvider} from 'styled-components';
-import {Link} from 'react-router-dom';
 
 const SearchPhoto  = ({searchChange, searchField}) => {
 
@@ -18,13 +17,6 @@ const SearchPhoto  = ({searchChange, searchField}) => {
     justify-content: flex-start;
     margin-top:30px;
     padding-bottom: 30px;
-    & .black {
-        margin-right:10px;
-        background-color: black;
-        color:white;
-        border: none;
-    }
-    background-color: ${props => props.theme.main};
     `;
 
     const Button = styled.button`
@@ -57,26 +49,29 @@ const theme = {
         
     width: 20em;
     height: 2.5em;
-        border: 2px solid black;
-        border-radius: 5px;
+        border: 1px solid black;
+        border-radius: 2px;
         padding: 5px;
 
      `;
-      
-      
+
+
     const [searchValue, setSearchValue] = useState(searchField);
-    
+
     return(
-        <SearchContainer>
+        <div className="SearchContainer">
             <SearchButtons>
-                <Button onClick={()=>{searchChange(''); setSearchValue(''); }}>Clear</Button>
-                <ThemeProvider theme={theme}>
-                <Button onClick={()=>searchChange(searchValue)}>Apply</Button>
-                </ThemeProvider>
-                </SearchButtons>
-            <Input type="text" placeholder="Search" value={searchValue} onChange={e => setSearchValue(e.target.value)}/>
-        </SearchContainer>
+
+            <Button onClick={()=>{searchChange(''); setSearchValue(''); }}>Clear</Button>
+            <ThemeProvider theme={theme}>
+            <Button onClick={()=>searchChange(searchValue)}>Apply</Button>
+            </ThemeProvider>
+            </SearchButtons>
+
+            <input className="searchBox" type="text" placeholder="Search" value={searchValue} onChange={e => setSearchValue(e.target.value)}/>
+        </div>
     );
 }
 
 export default SearchPhoto;
+
