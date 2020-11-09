@@ -45,6 +45,7 @@ const CategoriesScreen  = ({categories, searchChange, searchField}) => {
 <h1>Categories</h1>
 </Header>
 <MidSection>
+
 </MidSection>
 </SectionContainer>
 </div>     

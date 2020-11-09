@@ -20,14 +20,19 @@ const HomeScreen  = ({photos, searchChange, searchField}) => {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    text-transform: uppercase;
+    margin-top:15px;
     & a {
         color: #008174;        
+
     }
     & a:hover {
         color: #024d4c;
-      }
+        font-weight: bold;
+      
+    }
     & h1 {
-        font-size: 22px;
+        font-size: 20px;
     }
     `;
     const MidSection= styled.div`
@@ -37,9 +42,9 @@ const HomeScreen  = ({photos, searchChange, searchField}) => {
     
     `;
     const ListSection= styled.div`
-    flex-grow: 3;
-    margin-left:120px;
-    margin-top:30px   
+    flex-grow: 1;
+    margin-left:10px;
+    margin-top:20px   
     `;
 
     return (
