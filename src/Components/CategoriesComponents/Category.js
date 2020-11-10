@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 
-const Category  = ({key, title, url}) => {
+const Category  = ({id, title, url}) => {
   
 const CategoryContainer= styled.div`
     width:30%;
@@ -24,7 +24,7 @@ const CategoryContainer= styled.div`
 
     return (
         <CategoryContainer>
-        <Link to="/categories/${id}">
+        <Link to={`/categories/${id}`}>
 
         <CategoryCard>
 

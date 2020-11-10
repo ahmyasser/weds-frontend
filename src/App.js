@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-
+import CategoryPhotos from "./Screens/CategoryPhotos";
 import {useSelector , useDispatch} from 'react-redux';
 
 import Navbar from './Components/CommonComponents/Navbar';
@@ -12,7 +12,7 @@ import CategoriesScreen from './Screens/CategoriesScreen';
 import {requestPhotos, requestCategories, setSearchField} from './actions';
 import './App.css';
 
-function App({props}) {
+function App() {
    
   const searchField = useSelector(state => state.searchReducer.searchField);
   const categories = useSelector(state => state.categoryReducer.categories);
@@ -38,6 +38,10 @@ return (
     <BrowserRouter>
     <Navbar/>
     <Switch>
+    
+    <Route  exact path="/categories/:category_id">
+    <CategoryPhotos searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} categories={filteredCategories}/>
+    </Route>
 
     <Route exact path="/categories"> 
     <CategoriesScreen searchField={searchField} searchChange={onSearchChange} categories={filteredCategories} /></Route>

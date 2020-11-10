@@ -37,7 +37,7 @@ const CategoriesList = ({categories})=>{
         <CategoriesContainer>
         {
             categories.slice(offset, offset + numOFPosts).map((category)=>{
-            return <Category  key={category.id} title= {category.title} url={category.url} />
+            return <Category  id={category.id} title= {category.title} url={category.url} />
              })
         }
    
