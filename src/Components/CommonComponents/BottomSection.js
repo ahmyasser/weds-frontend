@@ -25,7 +25,7 @@ const BottomSection  = () => {
         @media (max-width:1024px) {
             flex-direction: column;
             flex-wrap: nowrap;
-            padding: 0 2rem;
+            
         }
     `;
 

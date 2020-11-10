@@ -5,18 +5,15 @@ import {useParams} from 'react-router-dom';
 import PhotosList from '../Components/PhotosComponents/PhotosList';
 import SearchPhotos from '../Components/PhotosComponents/SearchPhotos';
 
-const CategoryPhotos  = ({photos,categories, searchChange, searchField}) => {
+const CategoryPhotosScreen  = ({photos,categories, searchChange, searchField}) => {
 
     let { category_id } = useParams();
 
     const filteredPhotos = photos.filter((photo)=>{
-        console.log(photo.categoryId);
         return photo.categoryId == category_id;
       })
       
-      const category = categories.find(element => element.id == category_id);
-
-      console.log(category );
+    const category = categories.find(element => element.id == category_id);
 
     const SectionContainer= styled.div`
     max-width: 1100px;
@@ -50,13 +47,21 @@ const CategoryPhotos  = ({photos,categories, searchChange, searchField}) => {
     display: flex;
     justify-content: flex-end; 
     align-items: stretch;
-    
+    @media (max-width:1024px) {
+        max-width: 95%;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        
+    }
+      
     `;
     const ListSection= styled.div`
     flex-grow: 1;
     margin-left:10px;
     margin-top:20px   
     `;
+
 
     return (
 <div>
@@ -75,11 +80,11 @@ Gallery
 <MidSection>
 <SearchPhotos searchField={searchField} searchChange={searchChange}/>
 <ListSection>
-<PhotosList photos={filteredPhotos}/>
+<PhotosList photos={filteredPhotos} isCategory={true}/>
 </ListSection>
 </MidSection>
 </SectionContainer>
 </div>     
     );
 }
-export default CategoryPhotos;
+export default CategoryPhotosScreen;

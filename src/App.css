@@ -64,8 +64,14 @@ ul {
     flex-direction: column;
      flex-wrap: wrap;
      margin-right: 15px;
+     @media (max-width:1024px) {
+      justify-content: center;
+      align-items:center;  
+    }
      
 }
+
+
 
 .searchForm{
   width: 100%;
@@ -73,11 +79,10 @@ ul {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px;
   margin-bottom: 10px;
-}
+ }
 .searchForm p {
-  margin: 5px;
+  margin: 10px;
   text-align: center;
   display: flex;
   justify-content: center;
@@ -90,12 +95,13 @@ letter-spacing: 5px;
 font-weight: bold;
   font-size: 15px;
   color: #333333;
+  
 }
 .searchForm input  {
-  margin: 5px;
+  margin: 10px;
   border: 2px black solid ;
   width: 50%;
-  height: 100%;  
+  height: 100%;
 }
 .searchForm input::placeholder {
   

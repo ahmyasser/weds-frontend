@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
-import CategoryPhotos from "./Screens/CategoryPhotos";
+import CategoryPhotosScreen from "./Screens/CategoryPhotosScreen";
 import {useSelector , useDispatch} from 'react-redux';
 
 import Navbar from './Components/CommonComponents/Navbar';
@@ -8,6 +8,7 @@ import Footer from './Components/CommonComponents/Footer';
 import BottomSection from './Components/CommonComponents/BottomSection';
 import HomeScreen from './Screens/HomeScreen';
 import CategoriesScreen from './Screens/CategoriesScreen';
+import PhotoScreen from './Screens/PhotoScreen';
 
 import {requestPhotos, requestCategories, setSearchField} from './actions';
 import './App.css';
@@ -40,11 +41,17 @@ return (
     <Switch>
     
     <Route  exact path="/categories/:category_id">
-    <CategoryPhotos searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} categories={filteredCategories}/>
+    <CategoryPhotosScreen searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} categories={filteredCategories}/>
     </Route>
+
+    
 
     <Route exact path="/categories"> 
     <CategoriesScreen searchField={searchField} searchChange={onSearchChange} categories={filteredCategories} /></Route>
+
+    <Route  exact path="/:photo_id">
+    <PhotoScreen photos={filteredPhotos} categories={filteredCategories}/>
+    </Route>
 
     <Route path="/">
      <HomeScreen searchField={searchField} searchChange={onSearchChange} photos={filteredPhotos} />

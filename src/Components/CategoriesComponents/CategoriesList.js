@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import styled from 'styled-components';
 import ReactPaginate from 'react-paginate';
-//import {Link} from 'react-router-dom';
 import Category from '../CategoriesComponents/Category';
 
 const CategoriesContainer= styled.div`
@@ -10,7 +9,11 @@ display: flex;
 justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-width:1100px;
+width:100%;
+& div{
+  margin:7px;
+}
+
 `;
 
 
@@ -37,7 +40,7 @@ const CategoriesList = ({categories})=>{
         <CategoriesContainer>
         {
             categories.slice(offset, offset + numOFPosts).map((category)=>{
-            return <Category  id={category.id} title= {category.title} url={category.url} />
+            return <Category key={category.id} id={category.id} title= {category.title} url={category.url} />
              })
         }
    

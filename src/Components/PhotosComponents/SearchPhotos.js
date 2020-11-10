@@ -3,14 +3,6 @@ import styled, {ThemeProvider} from 'styled-components';
 
 const SearchPhoto  = ({searchChange, searchField}) => {
 
-    const SearchContainer= styled.div`
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: column;
-     flex-wrap: wrap;
-    
-    `;
-
 
     const SearchButtons= styled.div`
     display: flex;
@@ -44,17 +36,6 @@ const theme = {
   bg: "black",
   border: "black"
 };
-
-    const Input=styled.input`
-        
-    width: 20em;
-    height: 2.5em;
-        border: 1px solid black;
-        border-radius: 2px;
-        padding: 5px;
-
-     `;
-
 
     const [searchValue, setSearchValue] = useState(searchField);
 

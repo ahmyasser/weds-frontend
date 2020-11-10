@@ -39,7 +39,15 @@ const HomeScreen  = ({photos, searchChange, searchField}) => {
     display: flex;
     justify-content: flex-end; 
     align-items: stretch;
-    
+    @media (max-width:1024px) {
+        max-width: 95%;
+        flex-direction: column;
+        justify-content: center; 
+        align-items: center;
+        
+
+    }
+      
     `;
     const ListSection= styled.div`
     flex-grow: 1;

@@ -33,6 +33,7 @@ const Navbar  = () => {
         align-items: center;
         padding: 1rem;
         position: relative;
+        display: none;
     }
     `;
 

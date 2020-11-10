@@ -6,48 +6,51 @@ import  SearchCategories  from "../Components/CategoriesComponents/SearchCategor
 const CategoriesScreen  = ({categories, searchChange, searchField}) => {
 
     const SectionContainer= styled.div`
+    padding-top: 40px;
+    margin: auto;
+    width: 92%;
     max-width: 1100px;
-    margin: 0 auto;
-    @media (max-width:1024px) {
-      max-width: 100%;
-      padding: 2rem;
-  }
-  
     `;
     const Header= styled.div`
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    & a {
-        color: #008174;        
+    width:100%;
+
+    @media (max-width:1024px) {
+        flex-direction: column;
+        & form {
+            width:100%;
+            height:2.5em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        & p {
+            letter-spacing: 1px;
+            font-size: 9px;
+            margin: 0px;
+            padding:0px;
+            font-weight: normal;
+        }
+        & input::placeholder {
+  
+            color: black;
+            text-align: center; 
+            font-weight: normal;
+            font-size: 9px;
+            text-transform: uppercase; 
+            letter-spacing: 1px;
+          }
     }
-    & a:hover {
-        color: #024d4c;
-      }
-    & h1 {
-        font-size: 22px;
-    }
-    `;
-    const MidSection= styled.div`
-    display: flex;
-    justify-content: center; 
-    align-items: center;
-    width:1100px;
-    flex-direction:column;
+  
     `;
     
 
     return (
-<div>
 <SectionContainer>
 <Header>
 <SearchCategories searchField={searchField} searchChange={searchChange}/>
 </Header>
-<MidSection>
 <CategoriesList categories={categories}/>
-</MidSection>
 </SectionContainer>
-</div>     
     );
 }
 export default CategoriesScreen;

@@ -10,6 +10,12 @@ justify-content: flex-end;
 align-items: center;
 flex-wrap: wrap;
 width:99%
+@media (max-width:1024px) {
+  max-width: 100%;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center;
+}
 `;
 
 
@@ -20,7 +26,7 @@ margin:60px;
 
 `;
 
-const PhotosList = ({photos})=>{
+const PhotosList = ({photos, isCategory})=>{
     const numOFPosts=9;
     const [pageNum, setPageNum] = useState(0);
   
@@ -38,7 +44,7 @@ const PhotosList = ({photos})=>{
         <PhotosContainer>
         {
             photos.slice(offset, offset + numOFPosts).map((photo)=>{
-            return <Photo  key={photo.id} title= {photo.title} url={photo.url} />
+            return <Photo  id={photo.id} title= {photo.title} url={photo.url}  isCategory={isCategory} />
              })
         }
    
