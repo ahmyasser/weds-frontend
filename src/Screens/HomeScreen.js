@@ -2,8 +2,8 @@ import {Link} from 'react-router-dom';
 import styled from 'styled-components';
 import {FaAngleRight} from "react-icons/fa"
 
-import PhotoList from '../Components/PhotoList';
-import SearchPhotos from '../Components/SearchPhotos';
+import PhotosList from '../Components/PhotosComponents/PhotosList';
+import SearchPhotos from '../Components/PhotosComponents/SearchPhotos';
 
 const HomeScreen  = ({photos, searchChange, searchField}) => {
 
@@ -64,7 +64,7 @@ Gallery
 <MidSection>
 <SearchPhotos searchField={searchField} searchChange={searchChange}/>
 <ListSection>
-<PhotoList photos={photos}/>
+<PhotosList photos={photos}/>
 </ListSection>
 </MidSection>
 </SectionContainer>

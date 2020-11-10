@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import CategoriesList from '../Components/CategoriesComponents/CategoriesList';
+import  SearchCategories  from "../Components/CategoriesComponents/SearchCategories";
 
 const CategoriesScreen  = ({categories, searchChange, searchField}) => {
 
@@ -14,7 +16,7 @@ const CategoriesScreen  = ({categories, searchChange, searchField}) => {
     `;
     const Header= styled.div`
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     & a {
         color: #008174;        
@@ -28,24 +30,21 @@ const CategoriesScreen  = ({categories, searchChange, searchField}) => {
     `;
     const MidSection= styled.div`
     display: flex;
-    justify-content: flex-end; 
-    align-items: stretch;
+    justify-content: center; 
+    align-items: center;
+    width:1100px;
+    flex-direction:column;
+    `;
     
-    `;
-    const ListSection= styled.div`
-    flex-grow: 3;
-    margin-left:120px;
-    margin-top:30px   
-    `;
 
     return (
 <div>
 <SectionContainer>
 <Header>
-<h1>Categories</h1>
+<SearchCategories searchField={searchField} searchChange={searchChange}/>
 </Header>
 <MidSection>
-
+<CategoriesList categories={categories}/>
 </MidSection>
 </SectionContainer>
 </div>     

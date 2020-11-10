@@ -2,26 +2,24 @@ import { useState } from 'react';
 import styled from 'styled-components';
 import ReactPaginate from 'react-paginate';
 //import {Link} from 'react-router-dom';
-import Photo from './Photo';
+import Category from '../CategoriesComponents/Category';
 
-const PhotosContainer= styled.div`
+const CategoriesContainer= styled.div`
 
 display: flex;
-justify-content: flex-end;
+justify-content: center;
 align-items: center;
 flex-wrap: wrap;
-width:99%
+width:1100px;
 `;
 
 
 const PaginateContainer= styled.div`
 display: flex;
-justify-content: flex-start;
-margin:60px;
-
+justify-content: center;
 `;
 
-const PhotoList = ({photos})=>{
+const CategoriesList = ({categories})=>{
     const numOFPosts=9;
     const [pageNum, setPageNum] = useState(0);
   
@@ -32,18 +30,18 @@ const PhotoList = ({photos})=>{
   
     const offset = pageNum * numOFPosts;
 
-    const numOfPages = Math.ceil(photos.length / numOFPosts);
+    const numOfPages = Math.ceil(categories.length / numOFPosts);
     
     return(
         <div>
-        <PhotosContainer>
+        <CategoriesContainer>
         {
-            photos.slice(offset, offset + numOFPosts).map((photo)=>{
-            return <Photo  key={photo.id} title= {photo.title} url={photo.url} />
+            categories.slice(offset, offset + numOFPosts).map((category)=>{
+            return <Category  key={category.id} title= {category.title} url={category.url} />
              })
         }
    
-        </PhotosContainer>
+        </CategoriesContainer>
 
         <PaginateContainer>
         <ReactPaginate 
@@ -61,4 +59,4 @@ const PhotoList = ({photos})=>{
 </div>
     );
 }
-export default PhotoList;
+export default CategoriesList;

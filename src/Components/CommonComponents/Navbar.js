@@ -87,7 +87,7 @@ const Navbar  = () => {
         position: absolute;
         left: 0;
         top: 104%;
-        z-index: 10;
+        z-index: 2;
         min-width: 100% !important;
         background-color: white;
         list-style: none;

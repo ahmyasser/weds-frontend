@@ -3,9 +3,9 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 
 import {useSelector , useDispatch} from 'react-redux';
 
-import Navbar from './Components/Navbar';
-import Footer from './Components/Footer';
-import BottomSection from './Components/BottomSection';
+import Navbar from './Components/CommonComponents/Navbar';
+import Footer from './Components/CommonComponents/Footer';
+import BottomSection from './Components/CommonComponents/BottomSection';
 import HomeScreen from './Screens/HomeScreen';
 import CategoriesScreen from './Screens/CategoriesScreen';
 
@@ -29,8 +29,8 @@ const filteredPhotos = photos.filter((photo)=>{
   return photo.title.toLowerCase().includes(searchField.toLowerCase())
 })
 
-const filteredCategories = categories.filter((photo)=>{
-  return photo.title.toLowerCase().includes(searchField.toLowerCase())
+const filteredCategories = categories.filter((category)=>{
+  return category.title.toLowerCase().includes(searchField.toLowerCase())
 })
 
 
