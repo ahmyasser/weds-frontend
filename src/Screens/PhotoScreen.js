@@ -31,7 +31,6 @@ const PhotoScreen  = ({photos, categories}) => {
     margin-top:15px;
     & a {
         color: #008174;        
-
     }
     & a:hover {
         color: #024d4c;
@@ -50,6 +49,7 @@ const PhotoScreen  = ({photos, categories}) => {
     
     }
     @media (max-width:1024px) {
+        margin:0;
         & h1 {
             font-size: 16px;
             & a{

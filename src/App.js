@@ -3,7 +3,7 @@ import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import CategoryPhotosScreen from "./Screens/CategoryPhotosScreen";
 import {useSelector , useDispatch} from 'react-redux';
 
-import Navbar from './Components/CommonComponents/Navbar';
+import Navbar from './Components/CommonComponents/Desktop/Navbar';
 import Footer from './Components/CommonComponents/Footer';
 import BottomSection from './Components/CommonComponents/BottomSection';
 import HomeScreen from './Screens/HomeScreen';

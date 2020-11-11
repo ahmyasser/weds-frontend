@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {FaUserPlus} from "react-icons/fa";
 import DropdownMenu from "./DropdownMenu";
-import  MobileNavbar  from "./MobileNavbar";
+import  MobileNavbar  from "../Mobile/MobileNavbar";
 
 
 const Navbar  = () => {
