@@ -1,20 +1,20 @@
-import {useState} from 'react';
+import { useMediaQuery } from 'react-responsive';
 import styled from 'styled-components';
 import {Link} from 'react-router-dom';
 import {FaUserPlus} from "react-icons/fa";
+import DropdownMenu from "./DropdownMenu";
+import  MobileNavbar  from "./MobileNavbar";
+
 
 const Navbar  = () => {
-  const [Trigger, setTrigger] = useState(false);
 
-  const items = [{key: 1, name:"Tips & Etiquette"},  {key: 2, name:"Wedding Of The Week"}, {key: 3, name:"More"}]
-
-  const menu = items.map((item) =>
-  <li key={item.key}><Link to="/">{item.name}</Link></li>
- );
+  const isDesktop = useMediaQuery({
+    query: '(min-device-width: 1024px)'
+  })
 
     const HeaderContainer= styled.div`
     padding-top: 40px;
-    z-index: 9998;
+    z-index:1;
     transition: all ease 0.1s;
     margin: auto;
     width: 92%;
@@ -23,17 +23,9 @@ const Navbar  = () => {
         max-height: 78px;
         margin: -25px 20px;
       }
-      @media (max-width:1024px) {
-        display: none;
-      }
-      @media (max-width: 1024px) {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        padding: 1rem;
-        position: relative;
-        display: none;
+     
+    @media (max-width: 840px) {
+      display: none;     
     }
     `;
 
@@ -78,44 +70,9 @@ const Navbar  = () => {
         text-align: left;
     }
     `;
-    const Dropdown = styled.div`
-    position: relative;
-    display: flex;
-    align-items: center;       
-
-        `;
-        const DropdownMenu = styled.ul`
-        position: absolute;
-        left: 0;
-        top: 104%;
-        z-index: 2;
-        min-width: 100% !important;
-        background-color: white;
-        list-style: none;
-        padding: 0;
-        margin: 0;
-        box-shadow:  1px 2px 15px rgba(0, 0, 0, 0.2);  
-        & li{
-          list-style: none;
-          font-weight: bold;
-          text-transform: uppercase;
-          text-align: center;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          padding: 10px;
-          border-bottom: 1px solid black;
-        }
-        & a{
-          font-weight: bold;
-          text-transform: uppercase;
-          color: black;
-        }
-        `;
-
-    
-
-    return (<div>
+ 
+    const navbar=
+     <div>
         <HeaderContainer>
         <UserControl>
         <Link to="/">< FaUserPlus size={18}/></Link>
@@ -134,24 +91,15 @@ const Navbar  = () => {
                 <HeaderPart>                                   
                 <Link to="/" >VENDORS</Link>
                 <Link to="/" >GALLERY</Link>
-                <Dropdown onMouseEnter={()=> setTrigger(true)} onMouseLeave={()=> setTrigger(false)}>
-                <Link className="dropdownlist-header"  to="/">IDEAS & MORE</Link>
-            
-                <div className="dropdownlist-container">
-                    {Trigger && (
-                        <div className="dropdownlist">
-                        <DropdownMenu>
-                            {menu}
-                        </DropdownMenu>
-                    </div>
-                    )}
-                </div>
-              </Dropdown>
-        
+                <DropdownMenu/>
                 </HeaderPart>
         </Header>
           </HeaderContainer>
           </div>
-        );
+          ;
+          
+
+          
+    return isDesktop? navbar: <MobileNavbar/> ;
 }
 export default Navbar;

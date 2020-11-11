@@ -16,6 +16,7 @@ const CategoryPhotosScreen  = ({photos,categories, searchChange, searchField}) =
     const category = categories.find(element => element.id == category_id);
 
     const SectionContainer= styled.div`
+    z-index:2;
     max-width: 1100px;
     margin: 0 auto;
     @media (max-width:1024px) {

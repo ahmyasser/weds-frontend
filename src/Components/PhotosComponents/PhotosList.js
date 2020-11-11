@@ -9,7 +9,7 @@ display: flex;
 justify-content: flex-end;
 align-items: center;
 flex-wrap: wrap;
-width:99%
+width:100%
 @media (max-width:1024px) {
   max-width: 100%;
   flex-direction: column;
@@ -44,7 +44,7 @@ const PhotosList = ({photos, isCategory})=>{
         <PhotosContainer>
         {
             photos.slice(offset, offset + numOFPosts).map((photo)=>{
-            return <Photo  id={photo.id} title= {photo.title} url={photo.url}  isCategory={isCategory} />
+            return <Photo  key={photo.id} id={photo.id} title= {photo.title} url={photo.url}  isCategory={isCategory} />
              })
         }
    

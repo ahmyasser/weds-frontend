@@ -6,10 +6,10 @@ import  SearchCategories  from "../Components/CategoriesComponents/SearchCategor
 const CategoriesScreen  = ({categories, searchChange, searchField}) => {
 
     const SectionContainer= styled.div`
-    padding-top: 40px;
     margin: auto;
     width: 92%;
     max-width: 1100px;
+    z-index:2;
     `;
     const Header= styled.div`
     width:100%;

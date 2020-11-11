@@ -8,6 +8,7 @@ import SearchPhotos from '../Components/PhotosComponents/SearchPhotos';
 const HomeScreen  = ({photos, searchChange, searchField}) => {
 
     const SectionContainer= styled.div`
+    z-index:2;
     max-width: 1100px;
     margin: 0 auto;
     @media (max-width:1024px) {
@@ -21,7 +22,6 @@ const HomeScreen  = ({photos, searchChange, searchField}) => {
     justify-content: flex-start;
     align-items: center;
     text-transform: uppercase;
-    margin-top:15px;
     & a {
         color: #008174;        
 

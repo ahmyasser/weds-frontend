@@ -13,11 +13,12 @@ const PhotoContainer= styled.div`
     align-items: Center;
     flex-direction: column;
     @media (max-width:1024px) {
+    
     width:${isCategory? '100%':'50%'};
     & img {
-        max-height:${isCategory? '250px':'150'};    
-        padding:9px;    
-        width:${isCategory? '100%':'50%'};
+        max-height:${isCategory? '250px':'30vh'};    
+        padding:5px;
+        width:${'100%'};
     }
     & h3 {
         padding-left:9px;

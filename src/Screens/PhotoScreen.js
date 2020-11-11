@@ -14,6 +14,7 @@ const PhotoScreen  = ({photos, categories}) => {
 
       
     const SectionContainer= styled.div`
+    z-index:2;
     max-width: 1100px;
     margin: 0 auto;
     @media (max-width:1024px) {
@@ -44,7 +45,7 @@ const PhotoScreen  = ({photos, categories}) => {
         align-items: center;
         
         & a{
-            font-size: 22px;     
+            font-size: 21px;     
         }
     
     }
